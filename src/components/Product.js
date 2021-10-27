@@ -20,7 +20,8 @@ export default function ActionAreaCard({ prod, det }) {
     var history = useHistory();
     return (
         <Card sx={det ? { maxWidth: 450 } : {}} >
-            <Link to={det ? '/' : `/prod/${prod.UPC}`} style={{textDecoration:"none", color:"black"}}>
+            <Link to={det ? '/' : `/prod/${prod.UPC}`}
+                style={{textDecoration:"none", color:"black"}}>
             {/* <CardActionArea
                     onClick={()=>{det ? history.push('/') : history.push(`/prod/${prod.UPC}`)}}> */}
                 <CardMedia

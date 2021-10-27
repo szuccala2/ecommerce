@@ -4,7 +4,6 @@ import ProductList from './components/ProductList';
 import Prova from './components/Prova';
 import ProductDetails from './components/ProductDetails';
 import {
-  HashRouter,
   Switch,
   Route
 } from "react-router-dom";
