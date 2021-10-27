@@ -1,7 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
 import ProductList from './components/ProductList';
-import Prova from './components/Prova';
 import ProductDetails from './components/ProductDetails';
 import {
   Switch,
@@ -11,6 +9,10 @@ import {
 function App() {
   return (
     <Switch>
+      <Route path='/tw'
+        component={() => { 
+          window.location = 'https://theuselessweb.com/';
+          return null;}}/>
       <Route path="/prod/:id" component={ProductDetails} />
       <Route path="/" component={ProductList} />
     </Switch>

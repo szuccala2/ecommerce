@@ -1,5 +1,5 @@
 import Product from './Product';
-import { prodotti } from '../prodotti';
+import { prodotti } from '../data/prodotti';
 
 export default function ProductDetails(props) {
     return(

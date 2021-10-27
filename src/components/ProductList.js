@@ -1,16 +1,9 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import Avatar from '@mui/material/Avatar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
-import TextField from '@mui/material/TextField';
 import Header from './Header';
 import Footer from './Footer';
 import Product from './Product';
-import { prodotti } from '../prodotti';
+import { prodotti } from '../data/prodotti';
 
 export default function ProductList() {
   const [selected, setSelected] = React.useState("none");
@@ -47,8 +40,8 @@ export default function ProductList() {
           rowSpacing={{ xs: 5, md: 2 }}
         >
           {prodotti?.filter(selectedFilter).filter(searchFilter).map((prod,_) => (
-            <Grid item xs={3}>
-              <Product prod={prod} key={prod.UPC}/>
+            <Grid item xs={3} key={prod.UPC}>
+              <Product prod={prod}/>
             </Grid>
           ))}
         </Grid>
@@ -56,15 +49,6 @@ export default function ProductList() {
       <Grid item xs={1}>
         <Footer />
       </Grid>
-      {/* <Grid item>
-        <Avatar>W</Avatar>
-      </Grid>
-      <Grid item>
-        <Avatar>W</Avatar>
-      </Grid>
-      <Grid item xs zeroMinWidth>
-        <Typography noWrap>{message}</Typography>
-      </Grid> */}
     </Grid>
   );
 }

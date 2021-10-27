@@ -17,15 +17,15 @@ function ToggleButtons({ selected, setSelected }) {
       }}
     >
       <ButtonGroup aria-label="outlined button group">
-        <Button sx={{ boxShadow: 2 }} variant={selected=="in" ? "contained" : "outlined"}
-          onClick={()=>{if(selected=="in") {
+        <Button sx={{ boxShadow: 2 }} variant={selected==="in" ? "contained" : "outlined"}
+          onClick={()=>{if(selected==="in") {
             setSelected("none");
           } else {
             setSelected("in");
           }}} >
           IN STOCK</Button>
-        <Button sx={{ boxShadow: 2 }} variant={selected=="out" ? "contained" : "outlined"}
-          onClick={()=>{if(selected=="out") {
+        <Button sx={{ boxShadow: 2 }} variant={selected==="out" ? "contained" : "outlined"}
+          onClick={()=>{if(selected==="out") {
             setSelected("none");
           } else {
             setSelected("out");
@@ -69,7 +69,7 @@ export default  function Header({ selected, setSelected, searchTerm, setSearchTe
     <Box sx={{ height: 80, borderBottom: "1px solid black" }}>
       <Grid container direction="row">
         <Grid item xs={4}>
-            <img src="https://via.placeholder.com/150x80" />
+            <img src="https://via.placeholder.com/150x80" alt="logo" />
           </Grid>
           <Grid item xs={5} md={4}>
             <ToggleButtons selected={selected} setSelected={setSelected} />

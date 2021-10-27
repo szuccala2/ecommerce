@@ -1,16 +1,17 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
-import TextField from '@mui/material/TextField';
+import { Link } from 'react-router-dom'
   
 export default  function Header({ selected, setSelected, searchTerm, setSearchTerm }) {
     return (
         <Box sx={{ backgroundColor: "darkgray", height: "auto" }} p={4}>
             <Grid container justifyContent="end">
                 <Grid item>
-                    <a style={{color: "blue"}}>TWITTER</a> | <a style={{color: "blue"}}>FACEBOOK</a>
+                    <Link style={{ color: "blue", textDecoration: "none" }}
+                        onClick={()=>window.location = 'https://theuselessweb.com/'}>TWITTER</Link> | 
+                    <Link style={{ color: "blue", textDecoration: "none" }}
+                        onClick={()=>window.location = 'https://theuselessweb.com/'}>FACEBOOK</Link>
                 </Grid>
             </Grid>
         </Box>
