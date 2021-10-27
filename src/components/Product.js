@@ -19,7 +19,7 @@ function BasicChips() {
 export default function ActionAreaCard({ prod, det }) {
     var history = useHistory();
     return (
-        <Card sx={det ? { maxWidth: 500 } : {}} >
+        <Card sx={det ? { maxWidth: 450 } : {}} >
             <CardActionArea
                     onClick={()=>{det ? history.push('/') : history.push(`/prod/${prod.UPC}`)}}>
                 <CardMedia
