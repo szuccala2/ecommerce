@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 function BasicChips() {
     return (
@@ -20,8 +20,9 @@ export default function ActionAreaCard({ prod, det }) {
     var history = useHistory();
     return (
         <Card sx={det ? { maxWidth: 450 } : {}} >
-            <CardActionArea
-                    onClick={()=>{det ? history.push('/') : history.push(`/prod/${prod.UPC}`)}}>
+            <Link to={det ? '/' : `/prod/${prod.UPC}`} style={{textDecoration:"none", color:"black"}}>
+            {/* <CardActionArea
+                    onClick={()=>{det ? history.push('/') : history.push(`/prod/${prod.UPC}`)}}> */}
                 <CardMedia
                 component="img"
                 height="auto"
@@ -37,7 +38,8 @@ export default function ActionAreaCard({ prod, det }) {
                     </Typography>
                     {prod.availability.stock > 0 && <BasicChips />}
                 </CardContent>
-            </CardActionArea>
+            {/* </CardActionArea> */}
+            </Link>
         </Card>
     );
 }
